@@ -47,5 +47,5 @@ hackmuds' pre-processor ignores whitespaces
 hackmud uses ES6 (however UglifyJS does not)
 
 *Resources for JavaScript golfing techniques*
-[Tips for golfing in JavaScript](http://codegolf.stackexchange.com/questions/2682/#answers)
-[Tips for golfing in ES6](http://codegolf.stackexchange.com/questions/37624/#answers)
+- [Tips for golfing in JavaScript](http://codegolf.stackexchange.com/questions/2682/#answers)
+- [Tips for golfing in ES6](http://codegolf.stackexchange.com/questions/37624/#answers)
