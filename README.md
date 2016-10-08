@@ -3,6 +3,7 @@ Build system (using [GruntJS](http://gruntjs.com/)) for the game [hackmud](https
 
 ## Purpose
 Minify scripts in a hackmud-friendly way (remove semi-colons, keep newlines, etc.) automatically as well as turning valid JavaScripts into hackmud-friendly scripts.
+
 If you want your scripts to pass a linter you may use the constants `SCRIPTOR` and `DATABASE` instead of the hackmud macros `#s` and `#db`, these are replaced during the build process.
 
 A few of the minifications it does;
@@ -14,6 +15,7 @@ A few of the minifications it does;
 
 ## Future
 Support for ES6 techniques. (waiting on UglifyJS)
+
 Add more automated minification techniques specific to hackmud pre-processor.
 
 ## Installation
@@ -44,6 +46,7 @@ Upload script in hackmud `#up script`
 
 ## hackmud golfing tips
 hackmuds' pre-processor ignores whitespaces
+
 hackmud uses ES6 (however UglifyJS does not)
 
 *Resources for JavaScript golfing techniques*
