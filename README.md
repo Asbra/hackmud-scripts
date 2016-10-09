@@ -7,21 +7,37 @@ Minify scripts in a hackmud-friendly way (remove semi-colons, keep newlines, etc
 If you want your scripts to pass a linter you may use the constants `SCRIPTOR` and `DATABASE` instead of the hackmud macros `#s` and `#db`, these are replaced during the build process.
 
 A few of the minifications it does;
-* UglifyJS variable mangling
+* Variable mangling
 * Converts functions to ES6 arrow functions (experimental)
 * Replaces -=/+= 1 with --/++
 * Replaces === 0 with !
 * Removes semicolons
+* UglifyJS
+
+## Issues
+UglifyJS currently does not support ES6
 
 ## Future
 Support for ES6 techniques. (waiting on UglifyJS)
 
 Add more automated minification techniques specific to hackmud pre-processor.
 
+## Pre-requisites
+[Node.js + npm](https://nodejs.org/)
+
 ## Installation
 1. Place in your hackmud user scripts directory, eg. `%APPDATA%\username\scripts\` on Windows.
 2. Run `npm install` in the folder
 3. **Move your .js files to `src/`**
+
+### Build system for Sublime Text 3
+If you're using ST3 open `Tools > Build Systems > New Build System ...`
+```
+{
+	"shell_cmd": "grunt"
+}
+```
+
 
 ### Important
 Don't keep your scripts in the `scripts` folder, **they will get deleted!**
@@ -133,6 +149,24 @@ function(a, b) {
 ## Usage
 Place your scripts in `src/`
 Run `grunt`
+```
+>grunt
+Running "clean:0" (clean) task
+>> 12 paths cleaned.
+
+Running "clean:1" (clean) task
+>> 12 paths cleaned.
+
+Running "copy:pre" (copy) task
+Copied 12 files
+
+Running "uglify:build" (uglify) task
+
+Running "copy:post" (copy) task
+Copied 12 files
+
+Done, without errors.
+```
 Upload script in hackmud `#up script`
 
 ## hackmud golfing tips
